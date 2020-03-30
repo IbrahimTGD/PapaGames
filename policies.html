@@ -1,0 +1,671 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" 
+      type="image/png" 
+      href="https://papagames.netlify.com/Favicon.png">
+
+
+
+
+ <html lang="en">
+
+<head> 
+ 
+ 
+<meta charset="utf-8">
+ <title>Papa Games</title>
+ <meta name="description" content="Welcome to Papa Games. Play All Papa Louie games for free! No ads. ">
+<meta name="author" content="TGD Dev">
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="games, papa louie, gaming, flash, games online, games for kids, games for boys, games for girls, fun games, papa games, papa louie, Papa's Hot Doggeria, Papa's Cupcakeria, Papa's Pastaria, Papa's Donuteria, Papa's Cheeseria, Papa's Bakeria, Papa's Sushiria, Papa's Scooperia, Html, bootstrap, roblox ui, roblox, fun, indie" />
+
+ 
+ <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+   * {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+     
+     .inputs {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+      .enjoy-css {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* The footer is fixed to the bottom of the page */
+ 
+footer{
+	position: fixed;
+	bottom: 0;
+}
+ 
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+ 
+ 
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left{
+	width: 30%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+/* The company logo */
+ 
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+ 
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+ 
+/* Footer links */
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+ 
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+	width: 30%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+ 
+}
+     
+    </style>
+<!-- Start of Async ProveSource Code --><script>!function(o,i){window.provesrc&&window.console&&console.error&&console.error("ProveSource is included twice in this page."),provesrc=window.provesrc={dq:[],display:function(){this.dq.push(arguments)}},o._provesrcAsyncInit=function(){provesrc.init({apiKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI1ZTdlMmJhY2I2ZGYwZTEyODA2YTg2ZDciLCJpYXQiOjE1ODUzMjcwMjF9.UC2T7-8UXL2FP8_jiijq3LaUlNQYQwcBVIqCixOv3T0",v:"0.0.4"})};var r=i.createElement("script");r.type="text/javascript",r.async=!0,r["ch"+"ar"+"set"]="UTF-8",r.src="https://cdn.provesrc.com/provesrc.js";var e=i.getElementsByTagName("script")[0];e.parentNode.insertBefore(r,e)}(window,document);</script><!-- End of Async ProveSource Code -->
+ <script src="https://kit.fontawesome.com/1403e8bc20.js" crossorigin="anonymous"></script>
+
+ </head> 
+<body> 
+ 
+<div id="navbar">
+  <a href="https://papagames.netlify.com/" id="logo"> <img src="favicon.png" width=50" height=50"> Papa Games <img src="https://api.hostip.info/flag.php" style="width: 54px; height: 27px; border: none;" alt="Country Flag" />
+</a>
+  <div id="navbar-right">
+    <a  class="active" href="https://papagames.netlify.com/"> <i class="fas fa-home"></i> Home</a>
+   <a href="https://papagames.netlify.com/search.html"><i class="fas fa-search"></i> Search</a>
+      <a  href="https://papagames.netlify.com/account.html"> <img src="https://papagames.netlify.com/images/icon.papa.png" alt="icon.papa.png" width="20" height="20">  My papa account</a>
+       <a href="https://papagames.netlify.com/search.html"><i class="fas fa-list-alt"></i> Policies</a>
+     
+  </div>
+</div>
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+ 
+<h2> Policies </h2>
+
+<details>
+  <summary>Cookie Policy</summary>
+  <h1>Cookie Policy for Papa games</h1>
+
+<p>This is the Cookie Policy for Papa games, accessible from https://tgdsearch.netlify.com/</p>
+
+<p><strong>What Are Cookies</strong></p>
+
+<p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
+
+<p>For more general information on cookies see the Wikipedia article on HTTP Cookies.</p>
+
+<p><strong>How We Use Cookies</strong></p>
+
+<p>We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.</p>
+
+<p><strong>Disabling Cookies</strong></p>
+
+<p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.</p>
+
+<p><strong>The Cookies We Set</strong></p>
+
+<ul>
+
+
+
+
+
+
+
+<li>
+    <p>Site preferences cookies</p>
+    <p>In order to provide you with a great experience on this site we provide the functionality to set your preferences for how this site runs when you use it. In order to remember your preferences we need to set cookies so that this information can be called whenever you interact with a page is affected by your preferences.</p>
+</li>
+
+</ul>
+
+<p><strong>Third Party Cookies</strong></p>
+
+<p>In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.</p>
+
+<ul>
+
+
+<li>
+    <p>Third party analytics are used to track and measure usage of this site so that we can continue to produce engaging content. These cookies may track things such as how long you spend on the site or pages you visit which helps us to understand how we can improve the site for you.</p>
+</li>
+
+
+
+
+
+
+
+<li>
+    <p>We also use social media buttons and/or plugins on this site that allow you to connect with your social network in various ways. For these to work social media sites, we will set cookies through our site which may be used to enhance your profile on their site or contribute to the data they hold for various purposes outlined in their respective privacy policies.</p>
+</li>
+
+</ul>
+
+<p><strong>More Information</strong></p>
+
+<p>Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site. 
+
+<p>However if you are still looking for more information then you can contact us through one of our preferred contact methods:</p>
+
+<ul>
+<li>Email: Papagamesglobal@gmail.com</li>
+
+</ul>
+</details>
+
+<details>
+  <summary>Privacy Policy</summary>
+  <h1>Privacy Policy for Papa games</h1>
+
+<p>At Papa games, accessible from https://papagames.netlify.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Papa games and how we use it.</p>
+
+<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+
+<p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Papa games. This policy is not applicable to any information collected offline or via channels other than this website.</p>
+
+<h2>Consent</h2>
+
+<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+
+<h2>Information we collect</h2>
+
+<p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+<p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+<p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
+
+<h2>How we use your information</h2>
+
+<p>We use the information we collect in various ways, including to:</p>
+
+<ul>
+<li>Provide, operate, and maintain our webste</li>
+<li>Improve, personalize, and expand our webste</li>
+<li>Understand and analyze how you use our webste</li>
+<li>Develop new products, services, features, and functionality</li>
+<li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the webste, and for marketing and promotional purposes</li>
+<li>Send you emails</li>
+<li>Find and prevent fraud</li>
+</ul>
+
+<h2>Log Files</h2>
+
+<p>Papa games follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information. </a>.</p>
+
+<h2>Cookies and Web Beacons</h2>
+
+<p>Like any other website, Papa games uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+
+
+
+
+
+<h2>Third Party Privacy Policies</h2>
+
+<p>Papa game's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You may find a complete list of these Privacy Policies and their links here: Privacy Policy Links.</p>
+
+<p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites. What Are Cookies?</p>
+
+<h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+
+<p>Under the CCPA, among other rights, California consumers have the right to:</p>
+<p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
+<p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+<p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
+<p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+<h2>GDPR Data Protection Rights</h2>
+
+<p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+<p>The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.</p>
+<p>The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</p>
+<p>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</p>
+<p>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</p>
+<p>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</p>
+<p>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+<p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+<h2>Children's Information</h2>
+
+<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+
+<p>Papa games does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+>
+</details>
+
+<summary>Terms and conditions</summary>
+  <h2><strong>Terms and Conditions</strong></h2>
+
+<p>Welcome to Papa games!</p>
+
+<p>These terms and conditions outline the rules and regulations for the use of Papa games's Website, located at https://papagames.netlify.com/.</p>
+
+<p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Papa games if you do not agree to take all of the terms and conditions stated on this page. </a>.</p>
+
+<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+
+<h3><strong>Cookies</strong></h3>
+
+<p>We employ the use of cookies. By accessing Papa games, you agreed to use cookies in agreement with the Papa games's Privacy Policy.</p>
+
+<p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+
+<h3><strong>License</strong></h3>
+
+
+
+<p>This Agreement shall begin on the date hereof.</p>
+
+<p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Papa games  does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Papa games,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Papa games shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+
+<p>Papa games reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+
+<p>You warrant and represent that:</p>
+
+<ul>
+    <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
+    <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
+    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
+    <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+</ul>
+
+<p>You hereby grant Papa games a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+
+<h3><strong>Hyperlinking to our Content</strong></h3>
+
+<p>The following organizations may link to our Website without prior written approval:</p>
+
+<ul>
+    <li>Government agencies;</li>
+    <li>Search engines;</li>
+    <li>News organizations;</li>
+    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+</ul>
+
+<p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
+
+<p>We may consider and approve other link requests from the following types of organizations:</p>
+
+<ul>
+    <li>commonly-known consumer and/or business information sources;</li>
+    <li>dot.com community sites;</li>
+    <li>associations or other groups representing charities;</li>
+    <li>online directory distributors;</li>
+    <li>internet portals;</li>
+    <li>accounting, law and consulting firms; and</li>
+    <li>educational institutions and trade associations.</li>
+</ul>
+
+<p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Papa games; and (d) the link is in the context of general resource information.</p>
+
+<p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
+
+
+
+
+<h3><strong>iFrames</strong></h3>
+
+<p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+
+<h3><strong>Content Liability</strong></h3>
+
+<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+
+<h3><strong>Your Privacy</strong></h3>
+
+<p>Please read Privacy Policy</p>
+
+<h3><strong>Reservation of Rights</strong></h3>
+
+<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+
+<h3><strong>Removal of links from our website</strong></h3>
+
+<p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+
+<p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+
+<h3><strong>Disclaimer</strong></h3>
+
+<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+
+<ul>
+    <li>limit or exclude our or your liability for death or personal injury;</li>
+    <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+    <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+    <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+</ul>
+
+<p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+
+<p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p
+</details>
+
+ <footer class="footer-distributed">
+ 
+			<div class="footer-left">
+          <img src="favicon.png">
+			
+
+ 
+				<p class="footer-company-name"></p>
+			</div>
+ 
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Al mina street,
+						 </span>
+						Dubai, United arab emirates </p>
+				</div>
+ 
+				
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:papagamesglobal@gmail.com">papagamesglobal@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					"Welcome to Papa Games. Play All Papa Louie games for free! No ads. </p>
+				<a href="https://youtube.com/channel/UCoXKv6NYSTi5d6_wE08gpsg">sub to harvey<i class="fa fa-youtube"></i></a>
+				<div class="footer-icons">
+				
+					<a href="https://twitter.com/PapaGamesGB"><i class="fa fa-twitter"></i></a>
+					
+				</div>
+			</div>
+		</footer>
+ 
+ 
+ 
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+
+      
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e7f2ed574ea6850"></script> 
+	<script>
+	var beamer_config = {
+		product_id : "sGzgYhmg20862" //DO NOT CHANGE: This is your product code on Beamer
+	};
+</script>
+<script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
+	
+	<script type="text/javascript" id="cookieinfo"
+	src="//papagames.netlify.com/js/cookie.js">
+</script>
+
+					
+	
+</body>
+</html>
